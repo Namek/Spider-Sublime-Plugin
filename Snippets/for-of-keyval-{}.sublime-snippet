@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[for ${1:key}, ${2:value} of ${3:object} {
+	${2:value}
+}]]></content>
+    <tabTrigger>forofkv</tabTrigger>
+    <scope>source.spider</scope>
+    <description>for key, value of object {…}</description>
+</snippet>

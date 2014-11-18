@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[${1:key} in ${2:object}]]></content>
+    <tabTrigger>in</tabTrigger>
+    <scope>source.spider</scope>
+    <description>if</description>
+</snippet>

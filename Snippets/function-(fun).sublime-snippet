@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[func ${1:function_name} (${2:argument}) {
+	${0:// body...}
+}]]></content>
+    <tabTrigger>fun</tabTrigger>
+    <scope>source.spider</scope>
+    <description>Function</description>
+</snippet>

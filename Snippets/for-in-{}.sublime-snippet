@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[for ${1:item} in ${2:items} {
+	${1:item}
+}]]></content>
+    <tabTrigger>forin</tabTrigger>
+    <scope>source.spider</scope>
+    <description>for value in … {…}</description>
+</snippet>
