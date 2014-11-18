@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[func ${1:function1_name}(${2:argument}) extends ${3:function2_name}(${2:argument}) {
+	${0:}
+}]]></content>
+    <tabTrigger>funext</tabTrigger>
+    <scope>source.spider</scope>
+    <description>Function Extend</description>
+</snippet>

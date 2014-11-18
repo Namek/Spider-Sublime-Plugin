@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[[${1:expr} for ${2:value} in ${3:list} if ${4:if-expr}]]]></content>
+    <tabTrigger>forlistin</tabTrigger>
+    <scope>source.spider</scope>
+    <description>[x * 2 for x in list if …]</description>
+</snippet>
