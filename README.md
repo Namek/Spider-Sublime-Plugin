@@ -15,7 +15,12 @@ Functions
 ------------------
 `f` => `(args) -> { SELECTED_TEXT }`
 
-`fun` => ``
+`fun` => 
+```
+func function_name(argument) {
+	// body...
+}
+```
 
 `funext` => `func Function1(args) extends Function2(args) { ... }`
 
