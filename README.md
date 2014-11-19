@@ -3,7 +3,10 @@ Syntax highlighting and code snippets for [Spider language](http://spiderlang.or
 
 Installation
 ============
-On Windows: download/clone whole repository into folder: `%APPDATA%/Roaming/Sublime Text 3/Packages/SpiderScript`.
+Download/clone whole repository into the appropriate folder for your OS:
+
+- **Windows**: `%APPDATA%/Roaming/Sublime Text 3/Packages/SpiderScript`.
+- **OS X**: `~/Library/Application Support/Sublime Text 3/Packages/SpiderScript`
 
 
 Snippets
@@ -15,7 +18,7 @@ Functions
 ------------------
 `f` => `(args) -> { SELECTED_TEXT }`
 
-`fun` => 
+`fun` =>
 ```
 func function_name(argument) {
 	// body...
@@ -57,7 +60,7 @@ for key, value in items {
 }
 ```
 
-`forof` => 
+`forof` =>
 ```
 for key of object {
 	key
@@ -81,7 +84,7 @@ Conditions
 
 `if` => `if true {}`
 
-`ife` => 
+`ife` =>
 ```
 if true {
     SELECTED_TEXT
@@ -94,7 +97,7 @@ else {
 `ifin` =>
 ```
 if key in object {
-	
+
 }
 ```
 
@@ -105,10 +108,10 @@ Objects
 
 `in` => `key in object`
 
-`:f` => 
+`:f` =>
 ```
 method_name: (attribute) -> {
-	
+
 },
 ```
 
