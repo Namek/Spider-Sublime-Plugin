@@ -73,7 +73,7 @@ for key, value of object {
 
 `forlist` => `[expr for value in list]`
 
-`forlistin` => `[expr for value in list if if-expr]`
+`forlistif` => `[expr for value in list if if-expr]`
 
 
 Conditions
