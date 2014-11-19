@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[for ${1:key}, of ${2:object} {
+    <content><![CDATA[for ${1:key} of ${2:object} {
 	${1:value}
 }]]></content>
     <tabTrigger>forof</tabTrigger>
