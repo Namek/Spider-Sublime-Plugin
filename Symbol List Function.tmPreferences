@@ -14,6 +14,6 @@
 		<string>s/^(function|func)\s*\(.*\)//g</string>
 	</dict>
 	<key>uuid</key>
-	<string>3CEA49B2-A5C5-405C-82E2-B8B668877C38</string>
+	<string>1f1a6763-fec4-42aa-85ec-0e292cae0ca3</string>
 </dict>
 </plist>
