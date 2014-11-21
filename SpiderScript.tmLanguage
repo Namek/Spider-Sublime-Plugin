@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>SpiderScript Syntax: version 0.1</string>
+	<string>SpiderScript Syntax: version 0.1.2-SNAPSHOT</string>
 	<key>fileTypes</key>
 	<array>
 		<string>spider</string>
@@ -549,13 +549,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while|until)\b</string>
+			<string>\b(break|case|catch|continue|fallthrough|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while|until)\b</string>
 			<key>name</key>
 			<string>keyword.control.spider</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(delete|in|instanceof|new|typeof|with)\b</string>
+			<string>\b(delete|in|of|instanceof|new|typeof|with)\b</string>
 			<key>name</key>
 			<string>keyword.operator.spider</string>
 		</dict>
@@ -633,9 +633,28 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>!|\$|%|&amp;|\*|#|\-\-|\-|\+\+|\+|~|===|==|=|!=|or|and|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(in|of|instanceof|new|delete|typeof|void)\b</string>
+			<string>!|\$|%|&amp;|\*|#|\-\-|\-|\+\+|\+|~|===|==|=|!=|or|and|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\?\.|\?\?|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(in|of|instanceof|new|delete|typeof|void)\b</string>
 			<key>name</key>
 			<string>keyword.operator.spider</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.spider</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.spider</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match: drawWinner?().address or address?.zipCode</string>
+			<key>match</key>
+			<string>\w+(\?)\(.*\)(\.)?</string>
 		</dict>
 		<dict>
 			<key>match</key>
