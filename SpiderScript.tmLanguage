@@ -405,6 +405,40 @@
 			<string>constant.numeric.spider</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.range.begin.spider</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.spider</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.spider</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.spider</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.range.end.spider</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match range literal: [1..5], [1...5]</string>
+			<key>match</key>
+			<string>(\[)([0-9]+)(\.\.\.?)([0-9]+)(\])</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>'</string>
 			<key>beginCaptures</key>
@@ -543,7 +577,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(const|export|extends|final|implements|native|private|protected|public|static|synchronized|throws|transient|volatile)\b</string>
+			<string>\b(const|use|export|extends|final|implements|native|private|protected|public|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key>
 			<string>storage.modifier.spider</string>
 		</dict>
