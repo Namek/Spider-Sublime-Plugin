@@ -3,6 +3,15 @@ Syntax highlighting and code snippets for [Spider language](http://spiderlang.or
 
 Installation
 ============
+
+via Package Control
+-------------------
+If you have [Package Control](https://sublime.wbond.net/installation) installed then you can install the plugin by looking for `SpiderScript`.
+
+
+code from repository
+----------
+
 Download/clone whole repository into the appropriate folder for your OS:
 
 - **Windows**: `%APPDATA%/Roaming/Sublime Text 3/Packages/SpiderScript`.
