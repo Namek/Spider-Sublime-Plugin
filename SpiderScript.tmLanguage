@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>SpiderScript Syntax: version 0.1.2</string>
+	<string>SpiderScript Syntax: version 0.1.3</string>
 	<key>fileTypes</key>
 	<array>
 		<string>spider</string>
@@ -11,7 +11,7 @@
 	<key>firstLineMatch</key>
 	<string>^#!/usr/bin/env node</string>
 	<key>foldingStartMarker</key>
-	<string>^.*\b(function|func)\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$</string>
+	<string>^.*\b(function|func|fn)\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$</string>
 	<key>foldingStopMarker</key>
 	<string>^\s*\}</string>
 	<key>keyEquivalent</key>
@@ -60,7 +60,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>support.class.spider</string>
+					<string>entity.name.function.spider</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -101,7 +101,7 @@
 			<key>comment</key>
 			<string>match stuff like: Sound.prototype.play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?.$][\w?.$]*)\.(prototype)\.([a-zA-Z_?.$][\w?.$]*)\s*(=)\s*(function|func)?\s*(\()(.*?)(\))</string>
+			<string>([a-zA-Z_?.$][\w?.$]*)\.(prototype)\.([a-zA-Z_?.$][\w?.$]*)\s*(=)\s*(function|func|fn)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.prototype.spider</string>
 		</dict>
@@ -111,7 +111,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>support.class.spider</string>
+					<string>entity.name.function.spider</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -142,7 +142,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>support.class.spider</string>
+					<string>entity.name.function.spider</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -178,7 +178,7 @@
 			<key>comment</key>
 			<string>match stuff like: Sound.play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?.$][\w?.$]*)\.([a-zA-Z_?.$][\w?.$]*)\s*(=)\s*(function|func)\s*(\()(.*?)(\))</string>
+			<string>([a-zA-Z_?.$][\w?.$]*)\.([a-zA-Z_?.$][\w?.$]*)\s*(=)\s*(function|func|fn)\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.spider</string>
 		</dict>
@@ -219,7 +219,7 @@
 			<key>comment</key>
 			<string>match stuff like: play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?$][\w?$]*)\s*(=)\s*(function|func)\s*(\()(.*?)(\))</string>
+			<string>([a-zA-Z_?$][\w?$]*)\s*(=)\s*(function|func|fn)\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.spider</string>
 		</dict>
@@ -255,7 +255,7 @@
 			<key>comment</key>
 			<string>match regular function like: function myFunc(arg) { … }</string>
 			<key>match</key>
-			<string>\b(function|func)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))</string>
+			<string>\b(function|func|fn)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.spider</string>
 		</dict>
@@ -291,7 +291,7 @@
 			<key>comment</key>
 			<string>match stuff like: foobar: function() { … }</string>
 			<key>match</key>
-			<string>\b([a-zA-Z_?.$][\w?.$]*)\s*:\s*\b(function|func)?\s*(\()(.*?)(\))</string>
+			<string>\b([a-zA-Z_?.$][\w?.$]*)\s*:\s*\b(function|func|fn)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.json.spider</string>
 		</dict>
@@ -362,7 +362,7 @@
 			<key>comment</key>
 			<string>Attempt to match "foo": function</string>
 			<key>match</key>
-			<string>(?:((')([^']*)('))|((")([^"]*)(")))\s*:\s*\b(function|func)?\s*(\()([^)]*)(\))</string>
+			<string>(?:((')([^']*)('))|((")([^"]*)(")))\s*:\s*\b(function|func|fn)?\s*(\()([^)]*)(\))</string>
 			<!-- <string>(?:((')(.*?)('))|((")(.*?)(")))\s*:\s*\b(function)?\s*(\()(.*?)(\))</string> -->
 			<key>name</key>
 			<string>meta.function.json.spider</string>
@@ -589,7 +589,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(delete|in|of|instanceof|new|typeof|with)\b</string>
+			<string>\b(delete|in|of|instanceof|new|this|typeof|with)\b</string>
 			<key>name</key>
 			<string>keyword.operator.spider</string>
 		</dict>
@@ -667,7 +667,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>!|\$|%|&amp;|\*|#|\-\-|\-|\+\+|\+|~|===|==|=|!=|or|and|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\?\.|\?\?|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(in|of|instanceof|new|delete|typeof|void)\b</string>
+			<string>!|\$|%|&amp;|\*|#|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\?\.|\?\?|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(and|or|in|of|instanceof|new|delete|typeof|void)\b</string>
 			<key>name</key>
 			<string>keyword.operator.spider</string>
 		</dict>
