@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>SpiderScript Syntax: version 0.1.4</string>
+	<string>SpiderScript Syntax: version 0.1.5</string>
 	<key>fileTypes</key>
 	<array>
 		<string>spider</string>
@@ -583,13 +583,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(as|async|await|break|case|catch|continue|delete|default|do|else|fallthrough|finally|for|from|goto|if|import|package|return|switch|throw|try|while|until)\b</string>
+			<string>\b(as|async|await|break|case|catch|continue|default|do|else|fallthrough|finally|for|from|goto|if|import|package|return|switch|throw|try|while|until)\b</string>
 			<key>name</key>
 			<string>keyword.control.spider</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(delete|in|of|instanceof|new|this|typeof|with)\b</string>
+			<string>!|\$|%|&amp;|\*|#|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\?\.|\?\?|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(and|or|in|of|instanceof|new|delete|this|typeof|void)\b</string>
 			<key>name</key>
 			<string>keyword.operator.spider</string>
 		</dict>
@@ -664,12 +664,6 @@
 			<string>\bon(R(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|Mouse(o(ut|ver)|down|up|move)|B(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|S(croll|top|ubmit|elect(start|ionchange)?)|H(over|elp)|C(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|D(eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|Unload|P(aste|ropertychange)|Error(update)?|Key(down|up|press)|Focus|Load|A(ctivate|fter(update|print)|bort))\b</string>
 			<key>name</key>
 			<string>support.function.event-handler.spider</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>!|\$|%|&amp;|\*|#|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\?\.|\?\?|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(and|or|in|of|instanceof|new|delete|typeof|void)\b</string>
-			<key>name</key>
-			<string>keyword.operator.spider</string>
 		</dict>
 		<dict>
 			<key>captures</key>
