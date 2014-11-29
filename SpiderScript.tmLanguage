@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>SpiderScript Syntax: version 0.1.3</string>
+	<string>SpiderScript Syntax: version 0.1.4</string>
 	<key>fileTypes</key>
 	<array>
 		<string>spider</string>
@@ -583,7 +583,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(break|case|catch|continue|fallthrough|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while|until)\b</string>
+			<string>\b(as|async|await|break|case|catch|continue|delete|default|do|else|fallthrough|finally|for|from|goto|if|import|package|return|switch|throw|try|while|until)\b</string>
 			<key>name</key>
 			<string>keyword.control.spider</string>
 		</dict>
