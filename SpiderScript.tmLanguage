@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>SpiderScript Syntax: version 0.1.5</string>
+	<string>SpiderScript Syntax: version 0.1.6</string>
 	<key>fileTypes</key>
 	<array>
 		<string>spider</string>
@@ -589,7 +589,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>!|\$|%|&amp;|\*|#|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\?\.|\?\?|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(and|or|in|of|instanceof|new|delete|this|typeof|void)\b</string>
+			<string>!|\$|%|&amp;|\*|#|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\?\.|\?\?|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(and|or|not|in|of|instanceof|new|delete|this|typeof|void)\b</string>
 			<key>name</key>
 			<string>keyword.operator.spider</string>
 		</dict>
