@@ -629,12 +629,12 @@
         <key>1</key>
         <dict>
           <key>name</key>
-          <string>variable.other.class.js</string>
+          <string>variable.other.class.spider</string>
         </dict>
         <key>2</key>
         <dict>
           <key>name</key>
-          <string>variable.other.property.static.js</string>
+          <string>variable.other.property.static.spider</string>
         </dict>
       </dict>
       <key>match</key>
@@ -642,7 +642,7 @@
     \b([A-Z][_$\w]*)\s*\.
     ([_$a-zA-Z][_$\w]*)</string>
       <key>name</key>
-      <string>meta.property.class.js</string>
+      <string>meta.property.class.spider</string>
     </dict>
     <dict>
       <key>captures</key>
@@ -650,13 +650,50 @@
         <key>1</key>
         <dict>
           <key>name</key>
-          <string>variable.other.object.js</string>
+          <string>variable.other.object.spider</string>
         </dict>
       </dict>
       <key>match</key>
       <string>(?&lt;!\.)[_$a-zA-Z][_$\w]*\s*(?=[\[\.])</string>
       <key>name</key>
-      <string>variable.other.object.js</string>
+      <string>variable.other.object.spider</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.name.function.spider</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>meta.group.braces.round.function.arguments.spider</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?x)
+([_$a-zA-Z][_$\w]*)\s*
+(\(\s*\))</string>
+      <key>name</key>
+      <string>meta.function-call.without-arguments.spider</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.name.function.spider</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?x)
+([_$a-zA-Z][_$\w]*)\s*
+(?=\()</string>
+      <key>name</key>
+      <string>meta.function-call.with-arguments.spider</string>
     </dict>
     <dict>
       <key>captures</key>
@@ -664,19 +701,19 @@
         <key>2</key>
         <dict>
           <key>name</key>
-          <string>variable.other.property.js</string>
+          <string>variable.other.property.spider</string>
         </dict>
       </dict>
       <key>match</key>
       <string>(?&lt;=\.)\s*[_$a-zA-Z][_$\w]*</string>
       <key>name</key>
-      <string>meta.property.object.js</string>
+      <string>meta.property.object.spider</string>
     </dict>
     <dict>
       <key>match</key>
       <string>[_$a-zA-Z][_$\w]*</string>
       <key>name</key>
-      <string>variable.other.readwrite.js</string>
+      <string>variable.other.readwrite.spider</string>
     </dict>
 		<dict>
 			<key>match</key>
