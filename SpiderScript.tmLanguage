@@ -255,7 +255,7 @@
 			<key>comment</key>
 			<string>match regular function like: function myFunc(arg) { … }</string>
 			<key>match</key>
-			<string>\b(function|func|fn)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))</string>
+			<string>\b(function|func|fn|extends)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.spider</string>
 		</dict>
@@ -617,6 +617,67 @@
 			<key>name</key>
 			<string>variable.language.spider</string>
 		</dict>
+    <dict>
+      <key>match</key>
+      <string>\.?[A-Z][_$\dA-Z]*\b</string>
+      <key>name</key>
+      <string>variable.other.constant.spider</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>variable.other.class.js</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>variable.other.property.static.js</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?x)
+    \b([A-Z][_$\w]*)\s*\.
+    ([_$a-zA-Z][_$\w]*)</string>
+      <key>name</key>
+      <string>meta.property.class.js</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>variable.other.object.js</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?&lt;!\.)[_$a-zA-Z][_$\w]*\s*(?=[\[\.])</string>
+      <key>name</key>
+      <string>variable.other.object.js</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>variable.other.property.js</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?&lt;=\.)\s*[_$a-zA-Z][_$\w]*</string>
+      <key>name</key>
+      <string>meta.property.object.js</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>[_$a-zA-Z][_$\w]*</string>
+      <key>name</key>
+      <string>variable.other.readwrite.js</string>
+    </dict>
 		<dict>
 			<key>match</key>
 			<string>\b(debugger)\b</string>
