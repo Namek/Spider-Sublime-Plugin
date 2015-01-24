@@ -255,7 +255,7 @@
 			<key>comment</key>
 			<string>match regular function like: function myFunc(arg) { … }</string>
 			<key>match</key>
-			<string>\b(function|func|fn)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))</string>
+			<string>\b(function|func|fn|extends)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.spider</string>
 		</dict>
@@ -497,6 +497,37 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>begin</key>
+					<string>(\\\()</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.punctuation.expression.begin.spider</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>meta.expression.spider</string>
+					<key>end</key>
+					<string>(\))</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.punctuation.expression.end.spider</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.spider</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
 					<key>match</key>
 					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)</string>
 					<key>name</key>
@@ -617,6 +648,106 @@
 			<key>name</key>
 			<string>variable.language.spider</string>
 		</dict>
+    <dict>
+      <key>match</key>
+      <string>\.?[A-Z][_$\dA-Z]*\b</string>
+      <key>name</key>
+      <string>variable.other.constant.spider</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>variable.other.class.spider</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>variable.other.property.static.spider</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?x)
+    \b([A-Z][_$\w]*)\s*\.
+    ([_$a-zA-Z][_$\w]*)</string>
+      <key>name</key>
+      <string>meta.property.class.spider</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>variable.other.object.spider</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?&lt;!\.)[_$a-zA-Z][_$\w]*\s*(?=[\[\.])</string>
+      <key>name</key>
+      <string>variable.other.object.spider</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.name.function.spider</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>meta.group.braces.round.function.arguments.spider</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?x)
+([_$a-zA-Z][_$\w]*)\s*
+\??
+(\(\s*\))</string>
+      <key>name</key>
+      <string>meta.function-call.without-arguments.spider</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.name.function.spider</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?x)
+([_$a-zA-Z][_$\w]*)\s*
+\??
+(?=\()</string>
+      <key>name</key>
+      <string>meta.function-call.with-arguments.spider</string>
+    </dict>
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>variable.other.property.spider</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?&lt;=\.)\s*[_$a-zA-Z][_$\w]*</string>
+      <key>name</key>
+      <string>meta.property.object.spider</string>
+    </dict>
+    <dict>
+      <key>match</key>
+      <string>[_$a-zA-Z][_$\w]*</string>
+      <key>name</key>
+      <string>variable.other.readwrite.spider</string>
+    </dict>
 		<dict>
 			<key>match</key>
 			<string>\b(debugger)\b</string>
